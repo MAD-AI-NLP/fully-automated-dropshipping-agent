@@ -1,0 +1,20 @@
+# railway.toml — Railway Config-as-Code
+# =======================================
+# Railway auto-detects this file at the repo root. Push to a repo linked to
+# a Railway project (or `railway up` from the CLI) and it applies automatically.
+#
+# NOTE: unlike Render's render.yaml, Railway's config file does NOT declare
+# environment variables or volumes — those are set via the Railway Dashboard
+# or CLI (`railway variables`, `railway volume`). See the deploy checklist
+# below for exactly what to set.
+
+[build]
+builder = "NIXPACKS"
+buildCommand = "pip install -r requirements.txt"
+
+[deploy]
+startCommand = "gunicorn server:app --bind 0.0.0.0:$PORT --worker-class gthread --workers 1 --threads 4 --timeout 120"
+healthcheckPath = "/healthz"
+healthcheckTimeout = 100
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
