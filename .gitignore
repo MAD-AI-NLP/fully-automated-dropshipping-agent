@@ -38,3 +38,10 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+keyword_scores_cache.json
+*.cache.json
+seen_pids.json
+published_pids.json
+layer1/output/
+layer2/output/
