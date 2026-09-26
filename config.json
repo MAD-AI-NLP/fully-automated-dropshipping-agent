@@ -1,0 +1,106 @@
+{
+  "layer1": {
+    "niches": ["fashion", "shoes", "jewelry", "accessories", "wellness"],
+    "max_trends": 15,
+    "max_seed_keywords": 80,
+    "max_products_per_keyword": 20,
+    "regions": ["US", "Europe", "Korea", "Japan", "LatinAmerica", "Africa"],
+    "max_region_trends": 10,
+    "seen_pids_path": "layer1/output/seen_pids.json",
+
+    "cj_price_multiplier": 1.33,
+
+    "region_definitions": {
+      "US": {
+        "label": "United States",
+        "geo_codes": ["US"],
+        "tiktok_country": "US",
+        "tag": "Trend: USA"
+      },
+      "Europe": {
+        "label": "Europe",
+        "geo_codes": ["GB"],
+        "tiktok_country": "GB",
+        "tag": "Trend: Europe"
+      },
+      "Korea": {
+        "label": "South Korea",
+        "geo_codes": ["KR"],
+        "tiktok_country": "KR",
+        "tag": "Trend: Korea"
+      },
+      "Japan": {
+        "label": "Japan",
+        "geo_codes": ["JP"],
+        "tiktok_country": "JP",
+        "tag": "Trend: Japan"
+      },
+      "LatinAmerica": {
+        "label": "Latin America",
+        "geo_codes": ["BR"],
+        "tiktok_country": "BR",
+        "tag": "Trend: Latin America"
+      },
+      "Africa": {
+        "label": "Africa",
+        "geo_codes": ["ZA"],
+        "tiktok_country": "ZA",
+        "tag": "Trend: Africa"
+      }
+    },
+
+    "seed_categories": {
+      "Fashion": [
+        "maxi dress", "midi dress", "mini dress", "evening dress", "party dress",
+        "casual dress", "bodycon dress", "sweater dress",
+        "t-shirt", "blouse", "shirt", "tank top", "bodysuit", "crop top", "sweater", "hoodie",
+        "jeans", "wide leg pants", "leggings", "shorts", "maxi skirt", "midi skirt", "mini skirt",
+        "lounge set", "two piece set", "knit set", "active set",
+        "denim jacket", "trench coat", "blazer", "cardigan", "vest"
+      ],
+      "Shoes": ["sneakers", "heels", "sandals", "flats", "boots", "slippers"],
+      "Jewelry": [
+        "pendant necklace", "chain necklace", "choker", "layered necklace",
+        "stud earrings", "hoop earrings", "drop earrings", "ear cuff",
+        "bangle", "chain bracelet", "tennis bracelet", "charm bracelet",
+        "stacking rings", "statement ring", "adjustable ring", "watch", "anklet"
+      ],
+      "Accessories": [
+        "tote bag", "crossbody bag", "shoulder bag", "handbag", "backpack", "mini bag", "evening bag",
+        "cat eye sunglasses", "oversized sunglasses", "hair clips", "claw clip", "headband", "scrunchies",
+        "belt", "wallet", "card holder", "phone case", "phone strap", "magsafe wallet",
+        "cosmetic bag", "travel jewelry case", "travel organizer", "passport holder", "luggage tag"
+      ],
+      "Wellness": [
+        "resistance bands", "dumbbells", "jump rope", "pilates ring", "pilates ball",
+        "yoga mat", "cork yoga mat", "yoga block", "yoga strap",
+        "foam roller", "stretch strap", "massage ball", "massage gun", "mini massage gun",
+        "massage roller stick", "foot massager",
+        "posture corrector", "back support brace", "seat cushion",
+        "glass water bottle", "stainless steel water bottle", "tumbler", "shaker bottle"
+      ]
+    },
+
+    "lifestyle_keywords": [
+      "clean girl aesthetic", "coquette aesthetic", "quiet luxury",
+      "minimalist fashion", "capsule wardrobe", "old money style",
+      "pilates aesthetic", "gift for her", "self care gifts"
+    ]
+  },
+
+  "layer2": {
+    "store_url": "",
+    "publish_immediately": true,
+    "products_per_publish_run": 15,
+    "publish_frequency_hours": 72,
+    "empty_batch_retry_hours": 6,
+    "registry_ttl_days": 120,
+    "pricing": {
+      "min_margin_pct": 20.0,
+      "target_margin_pct": 25.0,
+      "max_margin_pct": 30.0,
+      "compare_at_multiplier": 1.35,
+      "min_absolute_profit": 5.0
+    }
+  }
+}

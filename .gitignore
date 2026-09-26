@@ -1,0 +1,40 @@
+# ── Secrets — NEVER commit these ────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Pipeline runtime state ───────────────────────────────────────────────────
+# seen_pids.json, winning_products.json, publish_state.json, and
+# published_pids.json are runtime state, not source code. In production these
+# live on a persistent volume (see PERSISTENT_DISK_PATH / server.py); they
+# should never be committed, and definitely never overwrite the volume's
+# real data via a deploy.
+layer1/output/
+layer2/output/
+
+# ── Local media cache (image_agent.py / cj_api.py download to temp dirs, but
+# just in case anything ever gets pointed at a repo-local path) ─────────────
+dropship_images/
+dropship_videos/
+
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+build/
+dist/
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── OS / editor cruft ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
